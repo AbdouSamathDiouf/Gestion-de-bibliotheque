@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+/*import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
@@ -21,3 +21,43 @@ const router = createRouter({
 })
 
 export default router
+*/
+
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from '@/views/Home.vue';
+import Theme from '@/views/Theme.vue';
+import ResourceDetail from '@/views/ResourceDetail.vue';
+import AddResource from '@/views/AddResource.vue';
+
+Vue.use(Router);
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: Home,
+    },
+    {
+      path: '/theme/:themeId',
+      name: 'Theme',
+      component: Theme,
+    },
+    {
+      path: '/resource/:resourceId',
+      name: 'ResourceDetail',
+      component: ResourceDetail,
+    },
+    {
+      path: '/add-resource/:themeId',
+      name: 'AddResource',
+      component: AddResource,
+    },
+    {
+      path: '*',
+      redirect: '/',
+    }    
+  ],
+});
+
