@@ -1,20 +1,20 @@
-<script setup>
+<!--<script setup>
 import { RouterLink, RouterView} from 'vue-router'
 </script>
-
+-->
 <template>
-    <nav class="navbar">
-      <div class="container">
-        <router-link to="/" class="navbar-brand">Ma Bibliothèque</router-link>
-        <div class="navbar-links">
-          <router-link v-for="theme in themes" :key="theme.id" :to="'/theme/' + theme.id" class="navbar-link">
+  <nav class="navbar">
+    <div class="container">
+      <router-link to="/" class="navbar-brand">Ma Bibliothèque</router-link>
+      <div class="navbar-links">
+        <router-link v-for="theme in themes" :key="theme.id" :to="'/theme/' + theme.id" class="navbar-link">
             {{ theme.name }}
-          </router-link>
-        </div>
+        </router-link>
       </div>
-    </nav>
-    <RouterView />
-  </template>
+    </div>
+  </nav>
+  <RouterView />
+</template>
   
   <script>
 
@@ -31,7 +31,7 @@ import { RouterLink, RouterView} from 'vue-router'
             ],
         };
     },
-    components: { RouterView }
+  //components: { RouterView }
 };
   </script>
   

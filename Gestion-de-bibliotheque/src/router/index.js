@@ -13,23 +13,27 @@ const router = createRouter({
   routes: [
      {
       path: '/',
-      name: 'Home',
+      name: 'HomeApp',
       component: HomeApp,
+      alias: "/accueil"
     },
     {
       path: '/theme/:themeId',
-      name: 'Theme',
+      name: 'ThemeApp',
       component: ThemeApp,
+      alias: "/theme"
     },
     {
       path: '/resource/:resourceId',
       name: 'ResourceDetail',
       component: ResourceDetail,
+      alias: "/resource"
     },
     {
       path: '/add-resource/:themeId',
       name: 'AddResource',
       component: AddResource,
+      alias: "/ajout"
     },
     {
       path: '/:catchAll(.*)',
