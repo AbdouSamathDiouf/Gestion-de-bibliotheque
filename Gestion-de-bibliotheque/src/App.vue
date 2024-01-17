@@ -1,29 +1,26 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Accueil</RouterLink>
-        <RouterLink to="/theme/:themeId">Thématique</RouterLink>
-        <RouterLink to="/resource/:resourceId">Détails d'une resource</RouterLink>
-        <RouterLink to="/add-resource/:themeId">Ajouter une resource</RouterLink>
-      </nav>
-    </div>
-  </header>
-  <RouterView />
+  <NavbarApp />
+  <ResourceList />
+  <ResourceCard />
+  <ResourceDetailCard />
+  <ResourceForm />
 </template>
 
 <script>
-  import Navbar from './components/Navbar.vue';
+  import NavbarApp from '@/components/NavbarApp.vue';
+  import ResourceList from '@/components/ResourceList.vue';
+  import ResourceCard from '@/components/ResourceCard.vue';
+  import ResourceDetailCard from '@/components/ResourceDetailCard.vue';
+  import ResourceForm from '@/components/ResourceForm.vue';
 
   export default {
     components : {
-      Navbar,
-    },
+      NavbarApp,
+      ResourceList,
+      ResourceCard,
+      ResourceDetailCard,
+      ResourceForm
+    }
   };
 
 </script>

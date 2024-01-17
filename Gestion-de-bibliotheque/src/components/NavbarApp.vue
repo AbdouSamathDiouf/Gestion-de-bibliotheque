@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink, RouterView} from 'vue-router'
+</script>
+
 <template>
     <nav class="navbar">
       <div class="container">
@@ -9,23 +13,26 @@
         </div>
       </div>
     </nav>
+    <RouterView />
   </template>
   
   <script>
+
   export default {
     data() {
-      return {
-        themes: [
-          { id: 'games', name: 'Jeux' },
-          { id: 'movies', name: 'Films' },
-          { id: 'series', name: 'Séries' },
-          { id: 'musiques', name: 'Musiques' },
-          { id: 'livres', name: 'Livres' },
-          { id: 'animaux', name: 'Animaux' },
-        ],
-      };
+        return {
+            themes: [
+                { id: 'games', name: 'Jeux' },
+                { id: 'movies', name: 'Films' },
+                { id: 'series', name: 'Séries' },
+                { id: 'musiques', name: 'Musiques' },
+                { id: 'livres', name: 'Livres' },
+                { id: 'animaux', name: 'Animaux' },
+            ],
+        };
     },
-  };
+    components: { RouterView }
+};
   </script>
   
   <style scoped>
