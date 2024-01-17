@@ -27,7 +27,7 @@ import { RouterLink, RouterView} from 'vue-router'
                 { id: 'series', name: 'Séries' },
                 { id: 'musiques', name: 'Musiques' },
                 { id: 'livres', name: 'Livres' },
-                { id: 'animaux', name: 'Animaux' },
+                { id: 'animaux', name: 'Animaux' }
             ],
         };
     },
