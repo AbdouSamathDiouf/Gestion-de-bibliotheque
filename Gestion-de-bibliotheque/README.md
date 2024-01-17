@@ -66,7 +66,7 @@ Valider les données entrées côté client et côté serveur (si une API est ut
 
 Permettre la suppression d'une ressource depuis la liste.
 
-5- Détails de la ressource :
+5- Détails de la ressource : 
 
 Afficher les détails complets d'une ressource individuelle.
 Inclure des informations telles que le titre, la description, l'auteur/réalisateur, etc.
