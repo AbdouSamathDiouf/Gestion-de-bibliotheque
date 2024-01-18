@@ -1,20 +1,21 @@
-<!--<script setup>
-import { RouterLink, RouterView} from 'vue-router'
-</script>
--->
 <template>
-  <nav class="navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <router-link to="/" class="navbar-brand">Ma Bibliothèque</router-link>
-      <div class="navbar-links">
-        <router-link v-for="theme in themes" :key="theme.id" :to="'/theme/' + theme.id" class="navbar-link">
-            {{ theme.name }}
-        </router-link>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li v-for="theme in themes" :key="theme.id" class="nav-item">
+            <router-link :to="'/theme/' + theme.id" class="nav-link">{{ theme.name }}</router-link>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
-  <RouterView />
 </template>
+
   
   <script>
 
@@ -31,41 +32,5 @@ import { RouterLink, RouterView} from 'vue-router'
             ],
         };
     },
-  //components: { RouterView }
 };
-  </script>
-  
-  <style scoped>
-  .navbar {
-    background-color: #333;
-    padding: 10px 0;
-    color: #fff;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5em;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar-links {
-    display: flex;
-  }
-  
-  .navbar-link {
-    margin-left: 15px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar-link:hover {
-    text-decoration: underline;
-  }
-  </style>
-  
+  </script> 

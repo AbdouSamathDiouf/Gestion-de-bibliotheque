@@ -2,9 +2,9 @@
     <div>
       <h2>{{ themeName }} Resources</h2>
       <ul>
-        <li v-for="resource in paginatedResources" :key="resource.id">
+        <li v-for="resources in paginatedResources" :key="resources.id">
           <!-- Contenu de chaque élément de la liste -->
-          {{ resource.title }}
+          {{ resources.title }}
         </li>
       </ul>
       <div class="pagination">

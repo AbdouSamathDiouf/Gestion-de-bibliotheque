@@ -15,25 +15,25 @@ const router = createRouter({
       path: '/',
       name: 'HomeApp',
       component: HomeApp,
-      alias: "/accueil"
+      //alias: "/accueil"
     },
     {
       path: '/theme/:themeId',
       name: 'ThemeApp',
       component: ThemeApp,
-      alias: "/theme"
+      //alias: "/theme"
     },
     {
       path: '/resource/:resourceId',
       name: 'ResourceDetail',
       component: ResourceDetail,
-      alias: "/resource"
+     // alias: "/resource"
     },
     {
       path: '/add-resource/:themeId',
       name: 'AddResource',
       component: AddResource,
-      alias: "/ajout"
+     // alias: "/ajout"
     },
     {
       path: '/:catchAll(.*)',

@@ -22,8 +22,8 @@
     },
     methods: {
       // Gère l'événement d'affichage des détails d'une ressource
-      viewDetails(resource) {
-        this.$router.push(`/resource/${resource.id}`);
+      viewDetails(resources) {
+        this.$router.push(`/resource/${resources.id}`);
       },
     },
     components: {
